@@ -1,0 +1,11 @@
+{
+  "name": "dude_path",
+  "version": "1.0.0",
+  "description": "DevOps Understanding & Development Exercise Path",
+  "main": "index.js",
+  "author": "santn",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
