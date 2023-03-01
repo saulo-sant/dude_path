@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  postgres: 
+    image: postgres:15.2
+    environment:
+      POSTGRES_PASSWORD: pass
+
+  webservice: 
+    build:      # . -> the following two lines are redundant but help me understand a bit better the potential properties that I could use
+      context: .
+      dockerfile: Dockerfile 
+    ports:
+      - '23000:23000'
