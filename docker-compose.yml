@@ -6,11 +6,12 @@ services:
     environment:
       POSTGRES_PASSWORD: pass
     ports:
-      - "5432:5432"
+      - "5431:5432"
 
   webservice: 
     build:      # . -> the following two lines are redundant but help me understand a bit better the potential properties that I could use
       context: .
       dockerfile: Dockerfile 
+
     ports:
       - '23000:23000'
