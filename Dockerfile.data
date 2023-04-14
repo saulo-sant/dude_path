@@ -1,0 +1,13 @@
+FROM node:19.7
+WORKDIR /
+
+COPY . .
+
+RUN yarn
+
+EXPOSE 23002
+
+WORKDIR /src
+
+
+CMD ["node", "data.js"]

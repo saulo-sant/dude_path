@@ -17,6 +17,18 @@ const databaseConfig= {
 
 
 const db = pgp(databaseConfig);
+// Copied from phind. Just a test
+db.query('SELECT tablename FROM pg_catalog.pg_tables WHERE schemaname = \'public\'')
+  .then(result => {
+    result.forEach(row => {
+      console.log(row.tablename);
+    });
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
+
 db.none('CREATE TABLE test (slug VARCHAR(50) PRIMARY KEY, content VARCHAR(50));')
 
 

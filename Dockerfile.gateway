@@ -1,0 +1,13 @@
+FROM node:19.7
+WORKDIR /
+
+COPY . .
+
+RUN yarn
+
+EXPOSE 2300
+
+WORKDIR /src
+
+
+CMD ["node", "index.js"]

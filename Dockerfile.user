@@ -5,9 +5,9 @@ COPY . .
 
 RUN yarn
 
-EXPOSE 23000
+EXPOSE 23001
 
 WORKDIR /src
 
 
-CMD ["node", "index.js"]
+CMD ["node", "user.js"]
